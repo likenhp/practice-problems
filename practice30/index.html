@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <script>
+        /*
+        Build a function, random_range, that takes 2 parameters, 
+        start_num and end_num.  
+        OPTIONALLY: If start_num is an array instead (and end_num isn't specified), 
+        then it returns a random element from the array
+
+- Example:
+	- random_range(2,15)
+		- returns 7
+	- random_range(1,100)
+		- returns 85
+	- random_range(['a','b','c','d','e'])
+		- returns 'b'
+        */
+        function random_range(start_num, end_num){
+            var minimum = Math.ceil(start_num);
+            var maximum = Math.floor(end_num);
+            var range = Math.floor(Math.random()*(maximum -minimum +1)) + minimum;
+            return range;
+        };
+        var answer = random_range(1, 17);
+        console.log(answer);
+
+        //OPTIONAL
+        var array = ['a', 'b', 'c', 'd', 'e'];
+        function random_range2(start_num, end_num){
+            var range = Math.floor(Math.random()*array.length);
+            return range;
+        }
+        var answer2 = array[random_range2(array) /* the is will give me a position value*/];
+        console.log(answer2);
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

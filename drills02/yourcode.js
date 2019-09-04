@@ -1,6 +1,8 @@
 
 
-function countOccurences(){
+function countOccurences(inputArray1){
+    var counter1 = {};
+    
 
 }
 

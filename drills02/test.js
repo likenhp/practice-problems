@@ -1,5 +1,6 @@
 var testVals = [{
-  question: `countOccurences: given an array of words and a separate word, count how many times a particular word given occurs within that array
+  question: `countOccurences: given an array of words and a separate word, 
+  count how many times a particular word given occurs within that array
     for example: ['dog','cat','dog','pig','canary','cat','dog'], 'dog'
         returns 3
   `,

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <script>
+        /*
+Build a function, do_math, that takes in 3 parameters: num1 (number), 
+num2 (number), and operator (string)
+
+- it uses the operator to determine what math to do to the numbers
+	- if '+', it adds them
+	- if '-', it subtracts them
+	- if '*' or 'x' or 'X', it multiplies them
+	- if '/', it divides them
+- if then returns the result
+- Example:
+	- do_math(5,2,'*')
+	- Return: 10
+        */
+            // debugger;
+            function do_math(num1, num2, operator){
+                var mathOperation = {
+                    "/" : function (number1, number2) {
+                        return number1 / number2;
+                    },
+                    "*" : function (number1, number2) {
+                        return number1 * number2;
+                    },
+                    "+" : function (number1, number2) {
+                        return number1 + number2;
+                    },
+                    "-" : function (number1, number2) {
+                        return number1 - number2;
+                    }
+                }
+                if(operator === "x" || operator === "X"){
+                    operator = "*";
+                }
+                //operation["x"] = operation["X"] = operation["*"];
+                // operation["*"] = operation["x"] = operation["X"]; 
+                //does not work due to right side first?
+                var result = mathOperation[operator](num1, num2);
+                return result;
+            }
+            var answer = do_math(7, 9, "X");
+            console.log(answer);
+
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

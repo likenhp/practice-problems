@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script>
+    /*
+    - given a string, create a new string with every other letter capitalized
+- example:
+	- parameters: "amazing"
+	- return: "aMaZiNg"
+
+### human-level instructions
+- create variable to store new string
+- start a loop to proceed through the string
+	- get a new letter from the string
+		- store it in a variable
+	- get the next letter from the string
+		- store it in a variable
+		- capitalize it
+	- add the regular and capitalized letters to the new string
+- repeat
+    */
+        function capsEveryOther(string){
+            var answer = "";
+            for(var letter = 0; letter < string.length; letter++){
+                if (letter % 2 !== 0){
+                    answer += string[letter].toUpperCase();
+                } else {
+                    answer += string[letter].toLowerCase();
+                }
+            }
+            return answer;
+        }
+        var result = capsEveryOther("amazing");
+        console.log(result);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
